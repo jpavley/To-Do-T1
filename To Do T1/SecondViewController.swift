@@ -17,6 +17,8 @@ class SecondViewController: UIViewController, UITextFieldDelegate {
         todoList.append(itemField.text!)
         
         itemField.text = ""
+        
+        NSUserDefaults.standardUserDefaults().setObject(todoList, forKey: "todoList")
     }
     
     override func viewDidLoad() {
