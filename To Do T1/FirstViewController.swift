@@ -40,6 +40,25 @@ class FirstViewController: UIViewController, UITableViewDelegate {
         return cell
     }
     
+    
+    func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
+        
+        if editingStyle == UITableViewCellEditingStyle.Delete {
+            todoList.removeAtIndex(indexPath.row)
+            NSUserDefaults.standardUserDefaults().setObject(todoList, forKey: "todoList")
+            itemList.reloadData()
+            
+        }
+        
+        if editingStyle == UITableViewCellEditingStyle.Insert {
+//            todoList.removeAtIndex(indexPath.row)
+//            NSUserDefaults.standardUserDefaults().setObject(todoList, forKey: "todoList")
+//            itemList.reloadData()
+            
+        }
+        
+    }
+    
     override func viewDidAppear(animated: Bool) {
         itemList.reloadData()
     }
