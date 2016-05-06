@@ -49,14 +49,7 @@ class FirstViewController: UIViewController, UITableViewDelegate {
             itemList.reloadData()
             
         }
-        
-        if editingStyle == UITableViewCellEditingStyle.Insert {
-//            todoList.removeAtIndex(indexPath.row)
-//            NSUserDefaults.standardUserDefaults().setObject(todoList, forKey: "todoList")
-//            itemList.reloadData()
-            
-        }
-        
+                
     }
     
     override func viewDidAppear(animated: Bool) {
